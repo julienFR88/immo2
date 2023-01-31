@@ -11,6 +11,10 @@ trait HasViewLoader
     {
         $dir = trim($dir, " .");
         $dir = str_replace(".", "/", $dir);
+
+
+        // echo (dirname(dirname(dirname(__DIR__))) . "/resources/view/$dir.blade.php");
+
         if(file_exists(dirname(dirname(dirname(__DIR__)))."/resources/view/$dir.blade.php"))
         {
             $this->registerView($dir);

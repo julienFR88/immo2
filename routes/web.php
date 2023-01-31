@@ -9,15 +9,25 @@
     Route::get('/ads', 'HomeController@allAds', 'home.all.ads');
     Route::get('/about', 'HomeController@about', 'home.about');
     Route::get('/post', 'HomeController@allPost', 'home.all.post');
-
+    
     // Je créer tout mes appels ajax
     
-
+    
     // Je créer mes url pour l'espace admin
-
-
+    
+    
     // Je créer mes url pour mes categories admins ( GET / POST / DELETE / PUT)
-
-
+    
+    
     // Je créer mes url pour le systeme d'authentification
+    Route::get('/login', 'Auth\LoginController@view', 'auth.login.view');
+    Route::post('/login', 'Auth\LoginController@login', 'auth.login');
+
+    Route::get('/register', 'Auth\RegisterController@view', 'auth.register.view');
+    Route::post('/register', 'Auth\RegisterController@register', 'auth.register');
+
+    Route::get('/forgot', 'Auth\forgotController@view', 'auth.forgot.password');
+    Route::post('/forgot', 'Auth\forgotController@register', 'auth.forgot');
+
+
 
