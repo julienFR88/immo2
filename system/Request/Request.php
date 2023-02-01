@@ -2,6 +2,10 @@
 
 namespace System\Request;
 
+use System\Request\Traits\HasRunValidation;
+use System\Request\Traits\HasValidationRules;
+use System\Request\Traits\HasFileValidationRules;
+
 class Request
 {
   use HasValidationRules, HasFileValidationRules, HasRunValidation;
@@ -16,7 +20,7 @@ class Request
   {
     if (isset($_POST)) 
     {
-      return $this->getAttributes();
+      return $this->postAttributes();
     }
 
     if (!empty($_FILES)) 

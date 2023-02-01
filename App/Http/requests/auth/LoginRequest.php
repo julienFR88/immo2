@@ -1,16 +1,16 @@
 <?php
 
-  namespace App\Http\Requests\Auth;
+namespace App\Http\Requests\Auth;
+use System\Request\Request;
 
-  use System\Request\Request;
-
-  class LoginController extends Request
+class LoginRequest extends Request
+{
+  protected function rules()
   {
-    protected function rules()
-    {
     return [
-        'email' => "required|max:64|email",
-        'password' => "required
-      ];
-    }
+      'email' => "required|max:64|email",
+      'password' => "required"
+    ];
+  }
+
 }

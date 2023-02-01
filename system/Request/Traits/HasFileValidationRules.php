@@ -2,7 +2,7 @@
 
 namespace System\Request\Traits;
 
-trait HasValidationRules
+trait HasFileValidationRules
 {
   // fonction qui permet de refuser un fichier trop lourd et un fichier trop petit
   protected function maxFile($name, $size)
